@@ -5,13 +5,13 @@ Note that these Python files use Python 2.7 as well as the numpy, matplotlib, vp
 
 Below, I will list out the files of this repository and give a brief description
 
-1. Gauss Orbit Determination - takes in a txt file (see 2002 KL6Final.txt as a template) that takes in the date of an observation, the time of the observation (UT), the RA and Declination of the object at that time, and the Sun-Earth vector in au. The code uses the method of gauss to calculate the orbital elements and uses differential correction to improve results. In addition, a vpython animation of the asteroid is created.
+1. Gauss Orbit Determination - takes in a txt file (see 2002 KL6Final.txt or 1994PN Test Case.txt as a template) that takes in the date of an observation, the time of the observation (UT), the RA and Declination of the object at that time, and the Sun-Earth vector in au. The code uses the method of gauss to calculate the orbital elements and uses differential correction to improve results. In addition, a vpython animation of the asteroid is created. Note that when running the code, you are asked to input how many data points per observation. This depends on how many data points are in the input txt file per day of observation. For example, in 2002 KL6Final.txt, there are two data points per each day, so 2 is entered. For 1994PN Test Case.txt, 1 is entered. This code also asks you to choose a root. You are to choose the only root with a j coefficient of 0, which is always choice 8.
 
 2. AstronomyTimeCalculator - calculates time conversions that are useful in Astronomy such as Sidereal time, Julian time, and UT
 
 3. fitsInfoGetter - shows a .fit file as well as the .fit heading
 
-4. LSPR - takes in a txt file with a list of information on background stars in a .fit file. Each line includes the x and y of the centroid of the star, and then the ra and declination of that star. LSPR then asks for the x and y of the centroid of the object of interest (asteroid). LSPR uses least-squares plate reduction to calculate the ra and declination of the asteroid which is the output.
+4. LSPR - takes in a txt file with a list of information on background stars in a .fit file. Each line includes the x and y of the centroid of the star, and then the ra and declination of that star. LSPR then asks for the x and y of the centroid of the object of interest (asteroid). LSPR uses least-squares plate reduction to calculate the ra and declination of the asteroid which is the output Examples of input txt files are included in LSPRstars1.txt and LSPRstars2.txt
 
 5. centroidprogram - takes in a .fit file, approximate x and y positions of the centroid of an object, and then the dimensions of the centroid box. The program that calculates the exact centroid of the object.
 
